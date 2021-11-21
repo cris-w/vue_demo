@@ -4,5 +4,4 @@ export const getName = {
             alert(this.name);
         }
     },
-
 }
