@@ -21,19 +21,13 @@ export default {
 <style scoped>
 h1 {
   background-color: skyblue;
+  transition: 0.5s linear;
 }
-.hello-enter-active {
-  animation: show 1s linear;
+/* 进入 , 离开*/
+.hello-enter, .hello-leave-to {
+  transform: translateX(-100%);
 }
-.hello-leave-active {
-  animation: show 1s linear reverse;
-}
-@keyframes show {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
+.hello-enter-to, .hello-leave {
+  transform: translateX(0);
 }
 </style>
