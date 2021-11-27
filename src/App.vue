@@ -1,31 +1,33 @@
 <template>
-  <div class="container">
-    <Banner />
-    <button>
-      <!-- Vue借助router-link 实现路由切换 -->
-      <router-link replace active-class="active" to="/about">About</router-link>
-    </button>
-    <button>
-      <router-link replace active-class="active" to="/home">Home</router-link>
-    </button>
-    <hr />
-    <!-- router-view 指定组件呈现位置 -->
-    <router-view></router-view>
+  <div>
+    <el-row>
+      <el-button>默认按钮</el-button>
+      <el-button type="primary">主要按钮</el-button>
+      <el-button type="success">成功按钮</el-button>
+      <el-button type="info">信息按钮</el-button>
+      <el-button type="warning">警告按钮</el-button>
+      <el-button type="danger">危险按钮</el-button>
+    </el-row>
+    <div class="block">
+      <span class="demonstration">带快捷选项</span>
+      <el-date-picker
+        v-model="value2"
+        align="right"
+        type="date"
+        placeholder="选择日期"
+        :picker-options="pickerOptions"
+      >
+      </el-date-picker>
+    </div>
   </div>
 </template>
 
 <script>
-import Banner from "./components/Banner.vue";
 export default {
   name: "App",
-  components: {
-    Banner,
-  },
+  components: {},
 };
 </script>
 
 <style scoped>
-.active {
-  background-color: red;
-}
 </style>

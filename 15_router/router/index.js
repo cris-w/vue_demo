@@ -8,6 +8,8 @@ import Detail from '../pages/Detail.vue'
 
 // 创建并暴露一个router
 export default new VueRouter({
+    // 默认为 hash 模式，即路径有 /#/，history模式没有，但是兼容性较差
+    mode: "history",
     routes: [
         {
             path: "/about",
