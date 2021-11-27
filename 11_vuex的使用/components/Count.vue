@@ -3,6 +3,7 @@
     <h1>当前的和为：{{ sum }}</h1>
     <h1>当前的和放大十倍为：{{ bigSum }}</h1>
     <h3>我在{{ school }}， 学习{{ subject }}</h3>
+    <h3 style="color: red">Person组件的总人数为：{{ personList.length }}</h3>
     <select v-model.number="n">
       <option value="1">1</option>
       <option value="2">2</option>
@@ -28,7 +29,7 @@ export default {
     // 借助mapState生成计算属性，从state中读取数据（对象写法）
     // ...mapState({ sum: "sum", school: "school", subject: "subject" }),
     // （数组写法，计算属性名和 state中的属性名一致才可以使用）
-    ...mapState(["sum", "school", "subject"]),
+    ...mapState(["sum", "school", "subject", "personList"]),
     ...mapGetters(["bigSum"]),
   },
   methods: {

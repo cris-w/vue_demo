@@ -25,13 +25,19 @@ const mutations = {
     },
     DECRE(state, value) {
         state.sum -= value;
+    },
+    ADD_PERSON(state, value) {
+        state.personList.unshift(value)
     }
 }
 // 准备 state--用于存储数据
 const state = {
     sum: 0,
     school: "浙江理工",
-    subject: "vue"
+    subject: "vue",
+    personList: [
+        { id: "001", name: "Tom" }
+    ]
 }
 // 用于将state中的数据进行加工
 const getters = {
